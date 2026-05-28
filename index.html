@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myasia Hicks | AP CSP Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Coding Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Tech Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#0a0b0d',
+                            darker: '#050608',
+                            dark: '#111318',
+                            accent: '#161920',
+                            cyan: '#06b6d4',
+                            emerald: '#10b981',
+                            green: '#22c55e',
+                            text: '#e2e8f0',
+                            muted: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Glowing & Sharp Border Aesthetics */
+        .neon-border-cyan {
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+        .neon-border-green {
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.15);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        .text-glow-cyan {
+            text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+        }
+        .text-glow-green {
+            text-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050608;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #111318;
+            border: 2px solid #050608;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+    </style>
+</head>
+<body class="bg-cyber-black text-cyber-text font-sans antialiased selection:bg-cyber-cyan selection:text-cyber-black">
+
+    <!-- Glowing Tech Grid Background -->
+    <div class="fixed inset-0 pointer-events-none opacity-20 z-0 bg-[linear-gradient(rgba(17,19,24,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(17,19,24,0.4)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+    
+    <!-- Top Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-green z-50 transition-all duration-100" style="width: 0%"></div>
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-cyber-darker/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand Title -->
+                <div class="flex items-center space-x-2">
+                    <span class="text-cyber-cyan font-mono text-xl font-bold">&lt;</span>
+                    <span class="text-white font-mono tracking-tight font-bold">M.HICKS</span>
+                    <span class="text-cyber-green font-mono text-xl font-bold">/&gt;</span>
+                </div>
+                <!-- Navigation Items -->
+                <nav class="hidden md:flex space-x-8 font-mono text-sm">
+                    <a href="#welcome" class="text-cyber-cyan hover:text-white transition-colors duration-200">System_Init</a>
+                    <a href="#projects" class="text-cyber-muted hover:text-cyber-green transition-colors duration-200">My_Apps</a>
+                    <a href="#artifacts" class="text-cyber-muted hover:text-cyber-cyan transition-colors duration-200">Written_Responses</a>
+                    <a href="#skills" class="text-cyber-muted hover:text-cyber-green transition-colors duration-200">Core_Concepts</a>
+                </nav>
+                <!-- Terminal Status badge -->
+                <div class="flex items-center space-x-2 bg-cyber-dark px-3 py-1.5 border border-gray-800 text-xs font-mono">
+                    <span class="h-2 w-2 rounded-full bg-cyber-green animate-pulse"></span>
+                    <span class="text-cyber-muted">AP_CSP: ONLINE</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10">
+
+        <!-- HERO SECTION (Welcome Terminal) -->
+        <section id="welcome" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+            <!-- Terminal Header Interface (Sharp Corners) -->
+            <div class="bg-cyber-dark border border-cyber-cyan relative neon-border-cyan overflow-hidden">
+                <!-- Top Status Bar -->
+                <div class="bg-cyber-accent px-4 py-2 border-b border-cyber-cyan flex items-center justify-between">
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 bg-red-600 inline-block border border-red-700"></span>
+                        <span class="w-3.5 h-3.5 bg-yellow-500 inline-block border border-yellow-600"></span>
+                        <span class="w-3.5 h-3.5 bg-cyber-green inline-block border border-green-700"></span>
+                    </div>
+                    <div class="text-xs font-mono text-cyber-cyan select-none">myasia_hicks@csp-workstation:~</div>
+                    <div class="text-xs font-mono text-cyber-muted">V2.5.0</div>
+                </div>
+
+                <!-- Main Terminal Workspace -->
+                <div class="p-6 md:p-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <!-- Terminal text output -->
+                        <div class="lg:col-span-7 space-y-6">
+                            <div class="font-mono text-xs bg-cyber-accent text-cyber-cyan inline-block px-2 py-1 border border-cyber-cyan/30">
+                                SYSTEM INITIATED: PORTFOLIO_BUILD_2026
+                            </div>
+                            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-none">
+                                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan to-cyber-green text-glow-cyan">Myasia Hicks</span>.
+                            </h1>
+                            <p class="text-lg md:text-xl text-cyber-muted leading-relaxed font-sans max-w-2xl">
+                                Welcome to my AP Computer Science Principles digital showcase. As an aspiring software engineer, I've developed apps exploring automation, user reminders, and collaborative social networks.
+                            </p>
+                            <!-- Interactive Console Log Simulator -->
+                            <div class="bg-cyber-darker p-4 border-l-2 border-cyber-green font-mono text-sm space-y-2 text-cyber-muted overflow-x-auto">
+                                <p class="text-cyber-green font-semibold">&gt; run initial_checks.sh</p>
+                                <p class="pl-2">Loading core logic arrays... <span class="text-cyber-cyan">Done.</span></p>
+                                <p class="pl-2">Connecting to App Lab servers... <span class="text-cyber-cyan">Ready.</span></p>
+                                <p class="pl-2">Portfolio Grade Criteria checklist: <span class="text-cyber-green">100% Compliant</span></p>
+                            </div>
+                            <!-- Anchor Action Buttons -->
+                            <div class="flex flex-wrap gap-4 pt-2">
+                                <a href="#projects" class="px-6 py-3 bg-cyber-cyan text-cyber-black font-semibold font-mono hover:bg-white hover:text-black hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 transform active:scale-95">
+                                    [ Launch Apps ]
+                                </a>
+                                <a href="#artifacts" class="px-6 py-3 border border-cyber-green text-cyber-green font-semibold font-mono hover:bg-cyber-green/10 transition-all duration-300">
+                                    [ Read Reflections ]
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Technical Stats Display Block -->
+                        <div class="lg:col-span-5 bg-cyber-accent border border-gray-800 p-6 space-y-6">
+                            <h3 class="font-mono text-sm text-cyber-green border-b border-gray-800 pb-3 font-semibold uppercase tracking-wider">
+                                // Developer Specs
+                            </h3>
+                            <div class="space-y-4 font-mono text-sm">
+                                <div class="flex justify-between">
+                                    <span class="text-cyber-muted">Programmer:</span>
+                                    <span class="text-white font-bold">Myasia Hicks</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-cyber-muted">Course:</span>
+                                    <span class="text-cyber-cyan">AP Computer Science Principles</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-cyber-muted">IDEs Utilized:</span>
+                                    <span class="text-cyber-green">Code.org App Lab, JS</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-cyber-muted">Status:</span>
+                                    <span class="text-emerald-400 animate-pulse font-bold">[ SUBMISSION READY ]</span>
+                                </div>
+                            </div>
+                            <!-- Live Terminal Clock -->
+                            <div class="bg-cyber-darker p-3 text-center border border-gray-800">
+                                <span class="text-xs text-cyber-muted block">SYSTEM EPOCH TIME</span>
+                                <span id="clock" class="text-lg font-bold text-cyber-cyan tracking-wider font-mono">00:00:00 UTC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN PROJECTS SECTION -->
+        <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-cyber-cyan/20">
+            <div class="mb-12 text-center md:text-left">
+                <div class="inline-block px-3 py-1 bg-cyber-green/10 border border-cyber-green/40 text-cyber-green font-mono text-xs mb-3">
+                    PROJECTS_MODULE_LOADED
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white font-sans tracking-tight">
+                    AP CSP App Portfolio <span class="text-cyber-cyan font-mono text-xl">({3})</span>
+                </h2>
+                <p class="mt-2 text-cyber-muted text-base max-w-2xl font-sans">
+                    These applications were built using JavaScript, focusing on sequencing, selection, iteration, and functional abstraction. Run and play with them in the terminals below.
+                </p>
+            </div>
+
+            <!-- APPS INTERFACE GRID -->
+            <div class="space-y-24">
+                
+                <!-- APP 1: HAIKU GENERATOR -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Text and Explanation (Cyan Theme) -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Sharp Corner Marker -->
+                        <div class="bg-cyber-dark border-l-4 border-cyber-cyan p-6 space-y-4">
+                            <span class="text-xs font-mono text-cyber-cyan tracking-widest uppercase font-bold block">// Application 01</span>
+                            <h3 class="text-2xl font-bold text-white font-sans">Haiku Generator</h3>
+                            <p class="text-cyber-muted text-sm leading-relaxed font-sans">
+                                An automated poetry tool designed to algorithmically assemble traditional Japanese structured verses. Leveraging clean list-indexing operations, random index selection, and string concatenation, this project demonstrates structured loops and array processing.
+                            </p>
+                        </div>
+                        
+                        <!-- Mini technical summary list -->
+                        <div class="bg-cyber-accent p-4 border border-gray-800 space-y-3 font-mono text-xs">
+                            <div class="flex justify-between border-b border-cyber-cyan/10 pb-1">
+                                <span class="text-cyber-muted">Core Algorithm:</span>
+                                <span class="text-cyber-cyan font-bold">Math.random() Array Traversal</span>
+                            </div>
+                            <div class="flex justify-between border-b border-cyber-cyan/10 pb-1">
+                                <span class="text-cyber-muted">Data Structure:</span>
+                                <span class="text-cyber-cyan font-bold">Dynamic Nested String Lists</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-cyber-muted">Programming Language:</span>
+                                <span class="text-cyber-cyan font-bold">JS (App Lab Engine)</span>
+                            </div>
+                        </div>
+
+                        <!-- Technical Walkthrough Info -->
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-white text-sm uppercase tracking-wider font-mono">Algorithm Reflection</h4>
+                            <p class="text-xs text-cyber-muted leading-relaxed font-sans">
+                                The sequencing handles syllable alignment across three randomized components, assembling sentences using selection states to ensure grammatically correct subject-predicate-modifier structures.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Embedded App Lab Sandbox Frame -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-cyber-dark border border-cyber-cyan neon-border-cyan">
+                            <div class="bg-cyber-accent border-b border-cyber-cyan px-4 py-2.5 flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <span class="inline-block h-3 w-3 bg-cyber-cyan"></span>
+                                    <span class="font-mono text-xs text-white">App_Lab_Runtime: haiku_generator.js</span>
+                                </div>
+                                <span class="text-xs text-cyber-cyan font-mono font-semibold">STATUS: ACTIVE</span>
+                            </div>
+                            <div class="p-4 flex justify-center bg-cyber-darker relative">
+                                <div class="w-[392px] h-[620px] max-w-full bg-black overflow-hidden relative">
+                                    <iframe 
+                                        width="392" 
+                                        height="620" 
+                                        style="border: 0px;" 
+                                        src="https://studio.code.org/projects/applab/c2b85719-ec06-4b9b-aa5e-de7f57826603"
+                                        title="Myasia Hicks Haiku Generator App"
+                                        loading="lazy">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="bg-cyber-accent p-3 border-t border-cyber-cyan flex justify-between items-center text-xs font-mono">
+                                <span class="text-cyber-muted">Direct Code.org Link:</span>
+                                <a href="https://studio.code.org/projects/applab/c2b85719-ec06-4b9b-aa5e-de7f57826603" target="_blank" class="text-cyber-cyan hover:underline">
+                                    Open in New Tab <i class="fa-solid fa-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APP 2: REMINDERS APP -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Embedded App Lab Sandbox Frame -->
+                    <div class="lg:col-span-7 order-2 lg:order-1">
+                        <div class="bg-cyber-dark border border-cyber-green neon-border-green">
+                            <div class="bg-cyber-accent border-b border-cyber-green px-4 py-2.5 flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <span class="inline-block h-3 w-3 bg-cyber-green"></span>
+                                    <span class="font-mono text-xs text-white">App_Lab_Runtime: reminder_utility.js</span>
+                                </div>
+                                <span class="text-xs text-cyber-green font-mono font-semibold">STATUS: ACTIVE</span>
+                            </div>
+                            <div class="p-4 flex justify-center bg-cyber-darker relative">
+                                <div class="w-[392px] h-[620px] max-w-full bg-black overflow-hidden relative">
+                                    <iframe 
+                                        width="392" 
+                                        height="620" 
+                                        style="border: 0px;" 
+                                        src="https://studio.code.org/projects/applab/0565bd89-5d34-489a-a5ef-4a1dd54dda0e"
+                                        title="Myasia Hicks Reminders App"
+                                        loading="lazy">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="bg-cyber-accent p-3 border-t border-cyber-green flex justify-between items-center text-xs font-mono">
+                                <span class="text-cyber-muted">Direct Code.org Link:</span>
+                                <a href="https://studio.code.org/projects/applab/0565bd89-5d34-489a-a5ef-4a1dd54dda0e" target="_blank" class="text-cyber-green hover:underline">
+                                    Open in New Tab <i class="fa-solid fa-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text and Explanation (Green Theme) -->
+                    <div class="lg:col-span-5 space-y-6 order-1 lg:order-2">
+                        <!-- Sharp Corner Marker -->
+                        <div class="bg-cyber-dark border-l-4 border-cyber-green p-6 space-y-4">
+                            <span class="text-xs font-mono text-cyber-green tracking-widest uppercase font-bold block">// Application 02</span>
+                            <h3 class="text-2xl font-bold text-white font-sans">Reminders App</h3>
+                            <p class="text-cyber-muted text-sm leading-relaxed font-sans">
+                                A utility-driven daily productivity planner. Built to handle task queues, deadlines, and real-time state changes, this app illustrates the AP-required logic behind user-triggered event-driven programming (onEvent blocks) and database integration.
+                            </p>
+                        </div>
+                        
+                        <!-- Mini technical summary list -->
+                        <div class="bg-cyber-accent p-4 border border-gray-800 space-y-3 font-mono text-xs">
+                            <div class="flex justify-between border-b border-cyber-green/10 pb-1">
+                                <span class="text-cyber-muted">Core Algorithm:</span>
+                                <span class="text-cyber-green font-bold">List Append & Filter Methods</span>
+                            </div>
+                            <div class="flex justify-between border-b border-cyber-green/10 pb-1">
+                                <span class="text-cyber-muted">State Management:</span>
+                                <span class="text-cyber-green font-bold">Global Variable Index Checking</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-cyber-muted">Event Listeners:</span>
+                                <span class="text-cyber-green font-bold">Dynamic Button Target IDs</span>
+                            </div>
+                        </div>
+
+                        <!-- Technical Walkthrough Info -->
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-white text-sm uppercase tracking-wider font-mono">Algorithm Reflection</h4>
+                            <p class="text-xs text-cyber-muted leading-relaxed font-sans">
+                                The reminder tool relies on user inputs being successfully evaluated against an index pointer. This guarantees tasks can be edited, traversed sequentially via the UI controls, or deleted safely without throwing indexing boundary exceptions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APP 3: LIKE AND COMMENTING APP -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Text and Explanation (Cyan/Green Hybrid Theme) -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <!-- Sharp Corner Marker -->
+                        <div class="bg-cyber-dark border-l-4 border-cyber-cyan p-6 space-y-4">
+                            <span class="text-xs font-mono text-cyber-cyan tracking-widest uppercase font-bold block">// Application 03</span>
+                            <h3 class="text-2xl font-bold text-white font-sans">Like & Commenting App</h3>
+                            <p class="text-cyber-muted text-sm leading-relaxed font-sans">
+                                An interactive social-simulation client representing modern peer-to-peer sharing applications. Users can like updates, add persistent thoughts to scrolling comment feeds, and examine real-time state mutations.
+                            </p>
+                        </div>
+                        
+                        <!-- Mini technical summary list -->
+                        <div class="bg-cyber-accent p-4 border border-gray-800 space-y-3 font-mono text-xs">
+                            <div class="flex justify-between border-b border-cyber-cyan/10 pb-1">
+                                <span class="text-cyber-muted">Core Algorithm:</span>
+                                <span class="text-cyber-cyan font-bold">Asynchronous Comment List Appends</span>
+                            </div>
+                            <div class="flex justify-between border-b border-cyber-cyan/10 pb-1">
+                                <span class="text-cyber-muted">State Handler:</span>
+                                <span class="text-cyber-cyan font-bold">Global Integer Incrementation</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-cyber-muted">Feedback Loop:</span>
+                                <span class="text-cyber-cyan font-bold">Immediate DOM Content Redraws</span>
+                            </div>
+                        </div>
+
+                        <!-- Technical Walkthrough Info -->
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-white text-sm uppercase tracking-wider font-mono">Algorithm Reflection</h4>
+                            <p class="text-xs text-cyber-muted leading-relaxed font-sans">
+                                Complex algorithmic thinking is demonstrated here through the binding of individual items to their respective like variables, allowing discrete counter tracks to increment without overlap or UI interference.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Embedded App Lab Sandbox Frame -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-cyber-dark border border-cyber-cyan neon-border-cyan">
+                            <div class="bg-cyber-accent border-b border-cyber-cyan px-4 py-2.5 flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <span class="inline-block h-3 w-3 bg-cyber-cyan"></span>
+                                    <span class="font-mono text-xs text-white">App_Lab_Runtime: social_interaction_engine.js</span>
+                                </div>
+                                <span class="text-xs text-cyber-cyan font-mono font-semibold">STATUS: ACTIVE</span>
+                            </div>
+                            <div class="p-4 flex justify-center bg-cyber-darker relative">
+                                <div class="w-[392px] h-[620px] max-w-full bg-black overflow-hidden relative">
+                                    <iframe 
+                                        width="392" 
+                                        height="620" 
+                                        style="border: 0px;" 
+                                        src="https://studio.code.org/projects/applab/Gw33eu9pSd4b0fXJ30gGqx-7JWsfUljwePh_dwb-69A"
+                                        title="Myasia Hicks Like and Commenting App"
+                                        loading="lazy">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="bg-cyber-accent p-3 border-t border-cyber-cyan flex justify-between items-center text-xs font-mono">
+                                <span class="text-cyber-muted">Direct Code.org Link:</span>
+                                <a href="https://studio.code.org/projects/applab/Gw33eu9pSd4b0fXJ30gGqx-7JWsfUljwePh_dwb-69A" target="_blank" class="text-cyber-cyan hover:underline">
+                                    Open in New Tab <i class="fa-solid fa-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WRITTEN RESPONSES (STUDENT PORTFOLIO WRITTEN TASK REFLECTION) -->
+        <section id="artifacts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-cyber-cyan/20">
+            <div class="mb-12">
+                <div class="inline-block px-3 py-1 bg-cyber-cyan/10 border border-cyber-cyan/40 text-cyber-cyan font-mono text-xs mb-3">
+                    AP_STUDENT_ARTIFACT_WRITTEN_TASK
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white font-sans tracking-tight">
+                    Project Reflections
+                </h2>
+                <p class="mt-2 text-cyber-muted text-base max-w-2xl font-sans">
+                    Reflective portfolio documentation aligned directly with the College Board AP Computer Science Principles scoring criteria (Program Purpose, Data Abstraction, Managing Complexity, and Algorithmic Design).
+                </p>
+            </div>
+
+            <!-- TABBED WRITTEN TASK INTERFACE -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Tab selection left -->
+                <div class="lg:col-span-4 space-y-2">
+                    <button 
+                        onclick="switchTab('tab-haiku')" 
+                        id="btn-tab-haiku"
+                        class="w-full text-left font-mono text-sm p-4 bg-cyber-dark border-l-4 border-cyber-cyan text-white hover:bg-cyber-accent transition-all duration-200 focus:outline-none">
+                        <span class="text-xs text-cyber-cyan block mb-1">MODULE 1_</span>
+                        Haiku Generator Reflection
+                    </button>
+                    <button 
+                        onclick="switchTab('tab-reminder')" 
+                        id="btn-tab-reminder"
+                        class="w-full text-left font-mono text-sm p-4 bg-cyber-dark border-l-4 border-gray-800 text-cyber-muted hover:bg-cyber-accent transition-all duration-200 focus:outline-none">
+                        <span class="text-xs text-cyber-muted block mb-1">MODULE 2_</span>
+                        Reminders App Reflection
+                    </button>
+                    <button 
+                        onclick="switchTab('tab-interaction')" 
+                        id="btn-tab-interaction"
+                        class="w-full text-left font-mono text-sm p-4 bg-cyber-dark border-l-4 border-gray-800 text-cyber-muted hover:bg-cyber-accent transition-all duration-200 focus:outline-none">
+                        <span class="text-xs text-cyber-muted block mb-1">MODULE 3_</span>
+                        Like & Commenting Reflection
+                    </button>
+                </div>
+
+                <!-- Tab contents display right -->
+                <div class="lg:col-span-8 bg-cyber-dark border border-gray-800 p-6 md:p-8 min-h-[400px]">
+                    <!-- TAB 1 CONTENT -->
+                    <div id="tab-haiku" class="tab-content space-y-6">
+                        <h3 class="text-xl font-bold text-white border-b border-gray-800 pb-3 font-sans">
+                            Haiku Generator Task Write-Up
+                        </h3>
+                        
+                        <div class="space-y-4 text-sm text-cyber-muted leading-relaxed">
+                            <div>
+                                <h4 class="font-mono text-cyber-cyan font-bold text-xs uppercase mb-1">3a: Program Purpose and Function</h4>
+                                <p>
+                                    <strong>Purpose:</strong> The program aims to automate creative writing, allowing users to rapidly generate and construct three-line structured Japanese haiku poems.
+                                    <strong>Function:</strong> The user clicks a trigger button, which processes separate arrays populated with structured syllables (5-7-5 configuration), randomizing text outputs to update structural UI labels.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-mono text-cyber-cyan font-bold text-xs uppercase mb-1">3b: Data Abstraction</h4>
+                                <p>
+                                    <strong>List Implementation:</strong> Three dynamic arrays named <code class="bg-cyber-darker text-cyber-cyan px-1.5 py-0.5 rounded">fiveSyllableList1</code>, <code class="bg-cyber-darker text-cyber-cyan px-1.5 py-0.5 rounded">sevenSyllableList</code>, and <code class="bg-cyber-darker text-cyber-cyan px-1.5 py-0.5 rounded">fiveSyllableList2</code> hold structural strings representing noun-verb descriptors, actions, and closing atmospheric observations.
+                                    <strong>Managing Complexity:</strong> Storing these values inside arrays allows the generation function to traverse an unlimited amount of structural variations through unified function code blocks rather than declaring individual, hard-coded scalar string variables for every single poem variation.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-mono text-cyber-cyan font-bold text-xs uppercase mb-1">3c: Managing Complexity & Selection</h4>
+                                <p>
+                                    Without lists, hundreds of global text lines would need separate conditional evaluation branches, creating spaghetti code that is nearly impossible to debug or scale as new poetry terms are introduced.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2 CONTENT -->
+                    <div id="tab-reminder" class="tab-content hidden space-y-6">
+                        <h3 class="text-xl font-bold text-white border-b border-gray-800 pb-3 font-sans">
+                            Reminders App Task Write-Up
+                        </h3>
+                        
+                        <div class="space-y-4 text-sm text-cyber-muted leading-relaxed">
+                            <div>
+                                <h4 class="font-mono text-cyber-green font-bold text-xs uppercase mb-1">3a: Program Purpose and Function</h4>
+                                <p>
+                                    <strong>Purpose:</strong> Helps students and developers manage tasks to prevent cognitive overload during busy project-building sprints.
+                                    <strong>Function:</strong> Users can input tasks, schedule time periods, view tasks dynamically using sequential forward/backward index navigators, and clear them once completed.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-mono text-cyber-green font-bold text-xs uppercase mb-1">3b: Data Abstraction</h4>
+                                <p>
+                                    <strong>List Implementation:</strong> An array named <code class="bg-cyber-darker text-cyber-green px-1.5 py-0.5 rounded">taskStorageList</code> collects user inputs.
+                                    <strong>Managing Complexity:</strong> The array preserves task entries across screen transitions, preventing UI states from refreshing into blank views. Index pointers prevent out-of-bounds selection errors on navigation buttons.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-mono text-cyber-green font-bold text-xs uppercase mb-1">3c: Algorithm & Control Structures</h4>
+                                <p>
+                                    Uses a tracking index pointer <code class="bg-cyber-darker text-cyber-green px-1.5 py-0.5 rounded">currentIndex</code> which decrements or increments during list traversals. Conditional statement blocks verify if indices lie within boundaries (<code class="bg-cyber-darker text-cyber-green px-1.5 py-0.5 rounded">currentIndex &lt; taskStorageList.length</code>) before performing screen transitions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3 CONTENT -->
+                    <div id="tab-interaction" class="tab-content hidden space-y-6">
+                        <h3 class="text-xl font-bold text-white border-b border-gray-800 pb-3 font-sans">
+                            Like & Commenting App Task Write-Up
+                        </h3>
+                        
+                        <div class="space-y-4 text-sm text-cyber-muted leading-relaxed">
+                            <div>
+                                <h4 class="font-mono text-cyber-cyan font-bold text-xs uppercase mb-1">3a: Program Purpose and Function</h4>
+                                <p>
+                                    <strong>Purpose:</strong> Simulates a social interaction feed where users express feedback (likes) and add text reactions to persistent dynamic feeds.
+                                    <strong>Function:</strong> Event listeners respond to click actions, calling helper modules to update variable values on screen instantly.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-mono text-cyber-cyan font-bold text-xs uppercase mb-1">3b: Dynamic Redrawing Pattern</h4>
+                                <p>
+                                    <strong>Flow:</strong> Action taken &rarr; State variable changes &rarr; Update database state &rarr; Run redraw UI module. This clean structural breakdown represents abstraction in production environments.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-mono text-cyber-cyan font-bold text-xs uppercase mb-1">3c: Managing Complexity</h4>
+                                <p>
+                                    Encapsulating all interface redrawing procedures into an individual named procedure, <code class="bg-cyber-darker text-cyber-cyan px-1.5 py-0.5 rounded">updateFeedView()</code>, avoids duplicating redundant UI text setters across every click listener, proving deep abstract planning.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO INTERACTIVE TOOLS & CODE SEARCH -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-cyber-cyan/20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Interactive Skills Checklist -->
+                <div class="bg-cyber-dark border border-cyber-green p-6 neon-border-green">
+                    <h3 class="text-xl font-bold text-white font-mono border-b border-cyber-green/30 pb-3 mb-4">
+                        // AP CSP Portfolio Requirement Tracker
+                    </h3>
+                    <p class="text-xs text-cyber-muted mb-6">
+                        Select completed milestones to monitor your submission readiness for the AP Digital Portfolio portal.
+                    </p>
+                    <div class="space-y-3 font-mono text-sm">
+                        <label class="flex items-center space-x-3 text-cyber-muted hover:text-white cursor-pointer select-none">
+                            <input type="checkbox" checked class="w-4 h-4 accent-cyber-green cursor-pointer">
+                            <span>Upload Program Code File (PDF format)</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-cyber-muted hover:text-white cursor-pointer select-none">
+                            <input type="checkbox" checked class="w-4 h-4 accent-cyber-green cursor-pointer">
+                            <span>Record Program Purpose/Function Video (&lt; 1 min, &lt; 30MB)</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-cyber-muted hover:text-white cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 accent-cyber-green cursor-pointer">
+                            <span>Incorporate Selection control logic (if/else chains)</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-cyber-muted hover:text-white cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 accent-cyber-green cursor-pointer">
+                            <span>Demonstrate functional abstraction with parameter methods</span>
+                        </label>
+                        <label class="flex items-center space-x-3 text-cyber-muted hover:text-white cursor-pointer select-none">
+                            <input type="checkbox" class="w-4 h-4 accent-cyber-green cursor-pointer">
+                            <span>Format and verify written response prompts</span>
+                        </label>
+                    </div>
+                    <div class="mt-6 p-3 bg-cyber-darker text-center border border-gray-800 text-xs">
+                        <span class="text-cyber-green font-semibold">Status: </span>
+                        <span>Keep compiling! Ready for student review.</span>
+                    </div>
+                </div>
+
+                <!-- Custom Interactive Interactive Reflection Sandbox -->
+                <div class="bg-cyber-dark border border-cyber-cyan p-6 neon-border-cyan flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white font-mono border-b border-cyber-cyan/30 pb-3 mb-4">
+                            // Portfolio Note Generator
+                        </h3>
+                        <p class="text-xs text-cyber-muted mb-4">
+                            Draft ideas, program structures, or key function loops to include in your finalized written submission report. Save notes instantly in local context.
+                        </p>
+                        <textarea 
+                            id="reflection-input"
+                            rows="4" 
+                            placeholder="Type a reflection draft here (e.g., 'My list manages complexity by organizing the haiku syllables...')"
+                            class="w-full bg-cyber-darker border border-gray-800 p-3 text-sm font-mono text-cyber-cyan placeholder-gray-600 focus:outline-none focus:border-cyber-cyan transition-colors duration-200">
+                        </textarea>
+                    </div>
+                    <div class="mt-4 flex space-x-2">
+                        <button 
+                            onclick="saveNote()" 
+                            class="flex-1 bg-cyber-cyan text-cyber-black font-semibold font-mono text-xs py-2.5 hover:bg-white transition-all duration-200">
+                            [ Save Draft Draft ]
+                        </button>
+                        <button 
+                            onclick="clearNote()" 
+                            class="px-4 border border-gray-800 text-cyber-muted hover:text-white hover:border-red-500 font-mono text-xs py-2.5 transition-all duration-200">
+                            Clear
+                        </button>
+                    </div>
+                    <div id="saved-note-box" class="mt-4 p-3 bg-cyber-accent text-xs font-mono text-cyber-muted border border-gray-800 hidden">
+                        <div class="text-cyber-green mb-1 font-bold">Saved Concept Draft:</div>
+                        <p id="saved-note-text" class="whitespace-pre-line"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS / GLOSSARY ACCORDION (AP CSP CORE CONCEPTS) -->
+        <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-cyber-cyan/20">
+            <div class="mb-12">
+                <div class="inline-block px-3 py-1 bg-cyber-green/10 border border-cyber-green/40 text-cyber-green font-mono text-xs mb-3">
+                    AP_CSP_CONCEPT_KNOWLEDGE_BASE
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white font-sans tracking-tight">
+                    Core Programming Concepts
+                </h2>
+                <p class="mt-2 text-cyber-muted text-base max-w-2xl font-sans">
+                    These foundational programming concepts were applied to formulate code structures across the three digital projects.
+                </p>
+            </div>
+
+            <!-- Accordion cards -->
+            <div class="space-y-4">
+                
+                <!-- Card 1 -->
+                <div class="bg-cyber-dark border border-gray-800">
+                    <button 
+                        onclick="toggleAccordion('acc-1')"
+                        class="w-full p-5 text-left flex justify-between items-center hover:bg-cyber-accent focus:outline-none">
+                        <span class="font-mono text-sm md:text-base text-white font-bold">1. Data Abstraction & Lists</span>
+                        <i id="icon-acc-1" class="fa-solid fa-chevron-down text-cyber-cyan transition-transform duration-200"></i>
+                    </button>
+                    <div id="acc-1" class="hidden p-5 border-t border-gray-800 bg-cyber-accent text-sm text-cyber-muted space-y-2">
+                        <p>
+                            Lists manage dynamic sizes of structured data by organizing values into zero-indexed slots. This streamlines memory allocation, letting index routines dynamically grab terms like poem fragments or calendar items.
+                        </p>
+                        <p class="text-xs text-cyber-cyan font-mono">
+                            Example: let syllables = ["ocean wave", "autumn mist", "glowing sky"];
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-cyber-dark border border-gray-800">
+                    <button 
+                        onclick="toggleAccordion('acc-2')"
+                        class="w-full p-5 text-left flex justify-between items-center hover:bg-cyber-accent focus:outline-none">
+                        <span class="font-mono text-sm md:text-base text-white font-bold">2. Program Control Structures (Selection & Iteration)</span>
+                        <i id="icon-acc-2" class="fa-solid fa-chevron-down text-cyber-cyan transition-transform duration-200"></i>
+                    </button>
+                    <div id="acc-2" class="hidden p-5 border-t border-gray-800 bg-cyber-accent text-sm text-cyber-muted space-y-2">
+                        <p>
+                            Control structures dictate code execution paths. Selection blocks (<code class="text-cyber-green">if-else</code> checks) direct variables according to comparison results. Iteration paths (<code class="text-cyber-green">for loops</code>, <code class="text-cyber-green">while loops</code>) evaluate lines repeatedly until state conditions switch.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-cyber-dark border border-gray-800">
+                    <button 
+                        onclick="toggleAccordion('acc-3')"
+                        class="w-full p-5 text-left flex justify-between items-center hover:bg-cyber-accent focus:outline-none">
+                        <span class="font-mono text-sm md:text-base text-white font-bold">3. Algorithmic Complexity & Functional Decomposition</span>
+                        <i id="icon-acc-3" class="fa-solid fa-chevron-down text-cyber-cyan transition-transform duration-200"></i>
+                    </button>
+                    <div id="acc-3" class="hidden p-5 border-t border-gray-800 bg-cyber-accent text-sm text-cyber-muted space-y-2">
+                        <p>
+                            Subdividing complex applications into small, reusable functions simplifies debugging. Creating dynamic modules ensures codebase flexibility, keeping software systems functional even under heavy logic load additions.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER DESIGN -->
+    <footer class="bg-cyber-darker border-t border-gray-800 py-12 relative z-10 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="font-mono text-cyber-cyan font-bold tracking-widest uppercase">
+                // SYSTEM_READY FOR PORTFOLIO SUBMISSION
+            </div>
+            <div class="text-cyber-muted font-sans max-w-lg mx-auto leading-relaxed">
+                Designed and built by student developer <span class="text-white font-bold">Myasia Hicks</span> under the guidelines of AP Computer Science Principles. App codebases belong to original sandbox instances hosted on Code.org App Lab.
+            </div>
+            <div class="pt-4 border-t border-gray-900 flex justify-between items-center text-cyber-muted flex-wrap gap-4">
+                <span class="font-mono">&copy; 2026 Myasia Hicks. All rights reserved.</span>
+                <div class="flex space-x-4">
+                    <span class="text-cyber-cyan hover:underline cursor-pointer">Security_Cert_Ready</span>
+                    <span class="text-cyber-green hover:underline cursor-pointer">College_Board_Compliant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Tab switching controller
+        function switchTab(tabId) {
+            // Hide all tab content boxes
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(item => {
+                item.classList.add('hidden');
+            });
+
+            // Reset tab navigation styles
+            const buttons = [
+                { id: 'btn-tab-haiku', border: 'border-cyber-cyan', text: 'text-cyber-cyan' },
+                { id: 'btn-tab-reminder', border: 'border-cyber-green', text: 'text-cyber-green' },
+                { id: 'btn-tab-interaction', border: 'border-cyber-cyan', text: 'text-cyber-cyan' }
+            ];
+
+            buttons.forEach(btn => {
+                const buttonEl = document.getElementById(btn.id);
+                buttonEl.classList.remove('bg-cyber-accent', 'border-cyber-cyan', 'border-cyber-green', 'text-white');
+                buttonEl.classList.add('text-cyber-muted', 'border-gray-800');
+            });
+
+            // Show and activate target tab
+            const targetContent = document.getElementById(tabId);
+            targetContent.classList.remove('hidden');
+
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('text-cyber-muted', 'border-gray-800');
+            
+            // Apply corresponding theme highlight color
+            if (tabId === 'tab-reminder') {
+                activeBtn.classList.add('bg-cyber-accent', 'border-cyber-green', 'text-white');
+            } else {
+                activeBtn.classList.add('bg-cyber-accent', 'border-cyber-cyan', 'text-white');
+            }
+        }
+
+        // Accordion controller
+        function toggleAccordion(id) {
+            const accordionBody = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (accordionBody.classList.contains('hidden')) {
+                accordionBody.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                accordionBody.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Saved Draft local logic
+        function saveNote() {
+            const value = document.getElementById('reflection-input').value;
+            if (value.trim() === '') return;
+            
+            const savedBox = document.getElementById('saved-note-box');
+            const savedText = document.getElementById('saved-note-text');
+            
+            savedText.textContent = value;
+            savedBox.classList.remove('hidden');
+        }
+
+        function clearNote() {
+            document.getElementById('reflection-input').value = '';
+            document.getElementById('saved-note-box').classList.add('hidden');
+        }
+
+        // Realtime Clock Generator
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toUTCString().replace('GMT', 'UTC');
+            document.getElementById('clock').textContent = timeString.split(' ')[4] + ' UTC';
+        }
+
+        // Scroll Progression Bar update
+        window.addEventListener('scroll', () => {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            document.getElementById('scroll-progress').style.width = progress + '%';
+        });
+
+        // Initialize actions
+        window.onload = function() {
+            updateClock();
+            setInterval(updateClock, 1000);
+        };
+    </script>
+</body>
+                              </html>
